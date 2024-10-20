@@ -1,4 +1,5 @@
 import sys
+from password_checker import check_password_strength
 
 def show_greeting():
     """ Function to demonstrate basic syntax """
@@ -12,7 +13,7 @@ def portfolio_menu():
     while True:
         print("\n=== Python Cybersecurity Portfolio ===")
         print("1. Basic Syntax - Portfolio Greeter")
-        print("2. (Future Feature) Control Flow")
+        print("2. Control Flow - Password Checker")
         print("3. (Future Feature) Functions")
         print("4. Exit")
 
@@ -21,7 +22,7 @@ def portfolio_menu():
         if choice == '1':
             show_greeting()
         elif choice == '2':
-            print("Control Flow will be available soon!")
+            check_password_strength()
         elif choice == '3':
             print("Function will be available soon!")
         elif choice == '4':
