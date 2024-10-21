@@ -1,6 +1,7 @@
 import sys
 from password_checker import check_password_strength
 from vowel_counter import vowel_counter
+from ip_file_handler import ip_file_handler
 
 def show_greeting():
     """ Function to demonstrate basic syntax """
@@ -27,7 +28,10 @@ def portfolio_menu():
         elif choice == '3':
             vowel_counter()
         elif choice == '4':
-            print("Exiting the Porfolio. Goodbye!")
+            ip_file_handler()
+            sys.exit()
+        elif choice =='5':
+            print("Exiting the portfolio. Goodbye!")
             sys.exit()
         else:
             print("Invalid option. Please try again.")
