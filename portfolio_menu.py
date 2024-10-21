@@ -1,5 +1,6 @@
 import sys
 from password_checker import check_password_strength
+from vowel_counter import vowel_counter
 
 def show_greeting():
     """ Function to demonstrate basic syntax """
@@ -24,7 +25,7 @@ def portfolio_menu():
         elif choice == '2':
             check_password_strength()
         elif choice == '3':
-            print("Function will be available soon!")
+            vowel_counter()
         elif choice == '4':
             print("Exiting the Porfolio. Goodbye!")
             sys.exit()
