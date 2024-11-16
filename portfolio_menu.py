@@ -2,6 +2,7 @@ import sys
 from password_checker import check_password_strength
 from vowel_counter import vowel_counter
 from ip_file_handler import ip_file_handler
+from login_system import login_system
 
 def show_greeting():
     """ Function to demonstrate basic syntax """
@@ -16,8 +17,10 @@ def portfolio_menu():
         print("\n=== Python Cybersecurity Portfolio ===")
         print("1. Basic Syntax - Portfolio Greeter")
         print("2. Control Flow - Password Checker")
-        print("3. (Future Feature) Functions")
-        print("4. Exit")
+        print("3. Functions - Vowel Counter")
+        print("4. File Handling - IP Address Reader/Writer")
+        print("5. Lists and Dictionaries - Login System")
+        print('6. Exit')
 
         choice = input("\nSelect an option (1-4): ")
 
@@ -29,8 +32,9 @@ def portfolio_menu():
             vowel_counter()
         elif choice == '4':
             ip_file_handler()
-            sys.exit()
         elif choice =='5':
+            login_system()
+        elif choice == '6':
             print("Exiting the portfolio. Goodbye!")
             sys.exit()
         else:
