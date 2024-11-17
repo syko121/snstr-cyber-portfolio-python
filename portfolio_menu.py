@@ -1,8 +1,9 @@
 import sys
-from password_checker import check_password_strength
+from password_checker.password_checker import check_password_strength
 from vowel_counter import vowel_counter
 from ip_file_handler import ip_file_handler
 from login_system import login_system
+from weather_report import weather_report
 
 def show_greeting():
     """ Function to demonstrate basic syntax """
@@ -20,7 +21,8 @@ def portfolio_menu():
         print("3. Functions - Vowel Counter")
         print("4. File Handling - IP Address Reader/Writer")
         print("5. Lists and Dictionaries - Login System")
-        print('6. Exit')
+        print("6. Modules and Libraries - Weather Report")
+        print("7. Exit")
 
         choice = input("\nSelect an option (1-4): ")
 
@@ -35,7 +37,9 @@ def portfolio_menu():
         elif choice =='5':
             login_system()
         elif choice == '6':
-            print("Exiting the portfolio. Goodbye!")
+            weather_report()
+        elif choice == '7':
+            print("Exiting the Portfolio. Goodbye!")
             sys.exit()
         else:
             print("Invalid option. Please try again.")
