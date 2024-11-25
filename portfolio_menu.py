@@ -4,6 +4,31 @@ from vowel_counter import vowel_counter
 from ip_file_handler import ip_file_handler
 from login_system import login_system
 from weather_report import weather_report
+from regex_parser import extract_emails
+from password_manager import store_password, verify_stored_passwords
+
+def password_manager():
+    """Run the password manager."""
+    while True:
+        print("\n== Password Manager ===")
+        print("1. Store a password")
+        print("2. Verify a password")
+        print("3. Back to menu")
+        choice = input("Select an option (1-3): ")
+        if choice == "1":
+            store_password()
+        elif choice == "2":
+            verify_stored_passwords()
+        elif choice == "3":
+            break
+
+
+
+
+
+def regex_parser():
+    """Run the email extractor"""
+    extract_emails("sample_log.txt")
 
 def show_greeting():
     """ Function to demonstrate basic syntax """
@@ -22,9 +47,10 @@ def portfolio_menu():
         print("4. File Handling - IP Address Reader/Writer")
         print("5. Lists and Dictionaries - Login System")
         print("6. Modules and Libraries - Weather Report")
-        print("7. Exit")
+        print("7. Regular Expressions Email Extractor")
+        print("8. Hashing Password - Password Manager")
 
-        choice = input("\nSelect an option (1-4): ")
+        choice = input("\nSelect an option (1-8): ")
 
         if choice == '1':
             show_greeting()
@@ -38,8 +64,11 @@ def portfolio_menu():
             login_system()
         elif choice == '6':
             weather_report()
-        elif choice == '7':
-            print("Exiting the Portfolio. Goodbye!")
+        elif choice == '7.':
+            regex_parser()
+        elif choice == '8':
+            password_manager()        
+        elif print("Exiting the Portfolio. Goodbye!"):
             sys.exit()
         else:
             print("Invalid option. Please try again.")

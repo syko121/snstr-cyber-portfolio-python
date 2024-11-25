@@ -1,0 +1,4 @@
+User_login: alice@example.com
+Failed login: bob_at_example.com
+Password reset: admin123@domain.org
+Notification sent to support@company.com
